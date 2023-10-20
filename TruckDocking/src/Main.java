@@ -10,6 +10,7 @@ public class Main {
         Register registerVehicle = new Register();
 
         int driverChoice = 0;
+        int continueWithDocking = 0;
         int registerAfterViewingDockedVehicles = 0;
 
         //welcome driver and get name
@@ -20,8 +21,8 @@ public class Main {
                 break;
         }
 
-        System.out.print("Hi " + driverName + ". If you would like to view the tracks parked in the bay enter 1. " +
-                "If you would like to register your vehicle enter 2:");
+        System.out.print("Hi " + driverName + "! To view the vehicles docked: enter 1 | " +
+                "To register your vehicle enter 2:");
 
         //options to register or see parked vehicles
         do {
@@ -45,5 +46,8 @@ public class Main {
         } else {
        registerVehicle.registerVehicle();
         }
+
+        RestartMenu restartMenu = new RestartMenu();
+        restartMenu.restart();
     }
 }
